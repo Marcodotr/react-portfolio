@@ -16,54 +16,63 @@ function NavTabs({ currentPage, handlePageChange }) {
   }
 
   return (
-    <div className="nav nav-tabs justify-content-center bg-dark text-decoration-none text-white">
-      <p className="nav-item justify-content-left"> Marco Rodriguez </p>
-    <ul className="nav nav-tabs justify-content-center bg-dark text-decoration-none text-white">
+    <nav className="nav mt-6 nav-tabs justify-content-center bg-dark text-decoration-none text-white">
+    <div className='container-fluid'>
+      <div className='navbar-header'>
+        <a className='navbar-brand text-size-lg text-white h1'>
+          Marco Rodriguez
+        </a>
+    <ul className="nav nav-tabs justify-content-center bg-dark text-decoration-none text-white ">
 
-      <li className="nav-item mt-4 text-decoration-none text-white">
+      <li className="nav-item mt-5 mb-5 text-decoration-none text-white">
         <a
           href="#about"
           onClick={() => handlePageChange('About')}
           // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
-          style={styles.color}
+          className={currentPage === 'About' ? 'nav-link active' : 'nav-link text-white'}
+          // style={styles.color}
         >
           About
         </a>
       </li>
-      <li className="nav-item mt-4">
+      <li className="nav-item mt-5 mb-5">
         <a
           href="#projects"
           onClick={() => handlePageChange('Projects')}
           // This is a conditional (ternary) operator that checks to see if the current page is "Home"
           // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          className={currentPage === 'Projects' ? 'nav-link active' : 'nav-link'}
+          className={currentPage === 'Projects' ? 'nav-link active' : 'nav-link text-white'}
+          // style={styles.color}
         >
           Projects
         </a>
       </li>
-      <li className="nav-item mt-4">
+      <li className="nav-item mt-5 mb-5">
         <a
           href="#contact"
           onClick={() => handlePageChange('Contact')}
           // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
+          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link text-white'}
+          // style={styles.color}
         >
           Contact
         </a>
       </li>
-      <li className="nav-item mt-4">
+      <li className="nav-item mt-5 mb-5">
         <a
           href="#resume"
           onClick={() => handlePageChange('Resume')}
           // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
+          className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link text-white'}
+          // style={styles.color}
         >
           Resume
         </a>
       </li>
     </ul>
     </div>
+    </div>
+    </nav>
   );
 }
 
