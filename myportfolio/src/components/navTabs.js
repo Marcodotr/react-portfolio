@@ -1,22 +1,37 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // Here we are using object destructuring assignment to pluck off our variables from the props object
 // We assign them to their own variable names
 function NavTabs({ currentPage, handlePageChange }) {
-  return (
-    <ul className="nav nav-tabs justify-content-center">
 
-      <li className="nav-item">
+  const styles = {
+    color: {
+      color:'black'
+    },
+    textDec: {
+    textDecoration: 'none'
+    }
+  }
+
+  return (
+    <div className="nav nav-tabs justify-content-center bg-dark text-decoration-none text-white">
+      <p className="nav-item justify-content-left"> Marco Rodriguez </p>
+    <ul className="nav nav-tabs justify-content-center bg-dark text-decoration-none text-white">
+
+      <li className="nav-item mt-4 text-decoration-none text-white">
         <a
           href="#about"
           onClick={() => handlePageChange('About')}
           // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
           className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
+          style={styles.color}
         >
           About
         </a>
       </li>
-      <li className="nav-item">
+      <li className="nav-item mt-4">
         <a
           href="#projects"
           onClick={() => handlePageChange('Projects')}
@@ -27,7 +42,7 @@ function NavTabs({ currentPage, handlePageChange }) {
           Projects
         </a>
       </li>
-      <li className="nav-item">
+      <li className="nav-item mt-4">
         <a
           href="#contact"
           onClick={() => handlePageChange('Contact')}
@@ -37,7 +52,7 @@ function NavTabs({ currentPage, handlePageChange }) {
           Contact
         </a>
       </li>
-      <li className="nav-item">
+      <li className="nav-item mt-4">
         <a
           href="#resume"
           onClick={() => handlePageChange('Resume')}
@@ -48,6 +63,7 @@ function NavTabs({ currentPage, handlePageChange }) {
         </a>
       </li>
     </ul>
+    </div>
   );
 }
 

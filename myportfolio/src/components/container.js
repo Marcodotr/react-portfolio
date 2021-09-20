@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import NavTabs from './navTabs';
-import Projects from './pages/Projects';
+import Projects from './pages/projects';
 import About from './pages/about';
-import Resume from './pages/Resume';
+import Resume from './pages/resume';
 import Contact from './pages/contact';
 
 export default function PortfolioContainer() {
