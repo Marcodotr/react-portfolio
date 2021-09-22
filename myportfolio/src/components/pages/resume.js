@@ -5,7 +5,7 @@ export default function Resume() {
     <div>
       <h1>Resume</h1>
       <div>
-    <img src='react-portfolio\myportfolio\src\asset\img\resume.png'></img>
+    <img src='react-portfolio\myportfolio\src\asset\img\resume.png' alt='#'></img>
     </div>
     </div>
   );

@@ -8,15 +8,6 @@ import Resume from '../asset/pdf/Resume.pdf'
 // We assign them to their own variable names
 function NavTabs({ currentPage, handlePageChange }) {
 
-  const styles = {
-    color: {
-      color:'black'
-    },
-    textDec: {
-    textDecoration: 'none'
-    }
-  }
-
   return (
     <nav className="nav mt-6 nav-tabs justify-content-center bg-dark text-decoration-none text-white">
     <div className='container-fluid'>
@@ -52,13 +43,24 @@ function NavTabs({ currentPage, handlePageChange }) {
       </li>
       <li className="nav-item mt-5">
         <a
-          href="#contact"
-          onClick={() => handlePageChange('Contact')}
+          href="https://github.com/Marcodotr"
+          onClick={() => handlePageChange('GitHub')}
           // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link text-white'}
+          className={currentPage === 'GitHub' ? 'nav-link active' : 'nav-link text-white'}
           // style={styles.color}
         >
-          Contact
+          GitHub
+        </a>
+      </li>
+      <li className="nav-item mt-5">
+        <a
+          href="https://www.linkedin.com/in/marco-rodriguez-792380215/"
+          onClick={() => handlePageChange('Linkedin')}
+          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'Linkedin' ? 'nav-link active' : 'nav-link text-white'}
+          // style={styles.color}
+        >
+          Linkedin
         </a>
       </li>
       <li className="nav-item mt-5">
