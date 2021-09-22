@@ -1,5 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../App.css'
+import Resume from '../asset/pdf/Resume.pdf'
 
 
 // Here we are using object destructuring assignment to pluck off our variables from the props object
@@ -18,13 +20,14 @@ function NavTabs({ currentPage, handlePageChange }) {
   return (
     <nav className="nav mt-6 nav-tabs justify-content-center bg-dark text-decoration-none text-white">
     <div className='container-fluid'>
-      <div className='navbar-header'>
-        <a className='navbar-brand text-size-lg text-white h1'>
+    <ul className="nav nav-tabs justify-content-center text-align-center bg-dark text-decoration-none text-white ">
+      <li className='navbar-header'>
+        <a className='navbar-brand text-white h1'>
           Marco Rodriguez
         </a>
-    <ul className="nav nav-tabs justify-content-center bg-dark text-decoration-none text-white ">
+      </li>
 
-      <li className="nav-item mt-5 mb-5 text-decoration-none text-white">
+      <li className="nav-item mt-5  text-decoration-none text-white">
         <a
           href="#about"
           onClick={() => handlePageChange('About')}
@@ -35,7 +38,7 @@ function NavTabs({ currentPage, handlePageChange }) {
           About
         </a>
       </li>
-      <li className="nav-item mt-5 mb-5">
+      <li className="nav-item mt-5">
         <a
           href="#projects"
           onClick={() => handlePageChange('Projects')}
@@ -47,7 +50,7 @@ function NavTabs({ currentPage, handlePageChange }) {
           Projects
         </a>
       </li>
-      <li className="nav-item mt-5 mb-5">
+      <li className="nav-item mt-5">
         <a
           href="#contact"
           onClick={() => handlePageChange('Contact')}
@@ -58,20 +61,14 @@ function NavTabs({ currentPage, handlePageChange }) {
           Contact
         </a>
       </li>
-      <li className="nav-item mt-5 mb-5">
-        <a
-          href="#resume"
-          onClick={() => handlePageChange('Resume')}
-          // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link text-white'}
-          // style={styles.color}
-        >
+      <li className="nav-item mt-5">
+        <a href={Resume} className={'nav-link text-white'}>
           Resume
         </a>
       </li>
     </ul>
     </div>
-    </div>
+    
     </nav>
   );
 }

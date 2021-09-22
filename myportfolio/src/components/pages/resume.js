@@ -4,9 +4,9 @@ export default function Resume() {
   return (
     <div>
       <h1>Resume</h1>
-      <p>
-       PlaceHolder
-      </p>
+      <div>
+    <img src='react-portfolio\myportfolio\src\asset\img\resume.png'></img>
+    </div>
     </div>
   );
 }
